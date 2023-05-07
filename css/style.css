@@ -1,0 +1,131 @@
+body {
+    background-color: #F6F6F6;
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo img {
+    width: 45%;
+}
+.navName {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    list-style: none;
+    width: 73%;
+    padding: 1%;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    width: 50%;
+    margin-left: auto;
+    
+}
+
+.heroImg {
+    width: 30%;
+    height: 600px;
+    padding: 25px;
+}
+.content {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 5px;
+}
+
+.introHeader {
+    color: #078F7F;
+}
+
+.line {
+ border-bottom: 1px solid black;
+ padding: 10px;
+ width: 95%;
+}
+
+footer ul {
+    list-style: none;
+    vertical-align: top;
+    font-family: Helvetica;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 60px 30px;
+    padding-top: 0;
+}
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+/* My UX Skills Section coded using CSS Flex*/
+.mySkills {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 60px 30px;
+    padding-top: 0;  
+}
+.flexContainer {
+    display: flex;
+    padding: 60px 30px;
+    flex-direction: row;
+}
+.flexContainer div {
+    width: 33%;
+    padding: 25px;
+}
+
+/* My Work Section Constructed Using CSS Grid*/
+.myWork {
+    font-family: Helvetica;
+    padding: 60px 30px;
+    padding-top: 0;
+}
+.workGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 500px 500px;
+} 
+
+.ImaginationLibrary {
+    width: 90%;
+}
+.Greecycle {
+    width: 90%;
+}
+.USDA {
+    width: 90%;
+}
+h4 {
+    color: #078F7F;
+}
+button {
+    padding: 10px;
+   display: inline-block;
+}
+button img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .workGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .flexContainer {
+        grid-template-rows: 300px 300px 300px;
+        grid-template-columns: 1fr;
+
+    }
+    ;
+}

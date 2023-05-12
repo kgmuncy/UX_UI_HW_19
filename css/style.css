@@ -21,22 +21,28 @@ nav {
     text-align: right;
     font-family: Arial, Helvetica, sans-serif;
 }
+.navHighlight {
+    color: #078F7F;
+    display: inline-block;
+}
 
 nav ul {
     width: 50%;
-    margin-left: auto;
-    
+    margin-left: auto;  
 }
 
-.heroImg {
-    width: 30%;
-    height: 600px;
-    padding: 25px;
+.intro {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+
 }
+
 .content {
     font-family: Arial, Helvetica, sans-serif;
-    width: 500px;
-    margin: 0 auto;
+    max-width: 500px;
+    padding: 5px;
+    font-size: 17px;
 }
 
 button {
@@ -45,6 +51,7 @@ button {
 
 .introHeader {
     color: #078F7F;
+    font-size: 30px;
 }
 
 .line {
@@ -67,6 +74,7 @@ li {
     display: inline-block;
     margin-right: 10px;
 }
+
 /* My UX Skills Section coded using CSS Flex*/
 .mySkills {
     font-family: Arial, Helvetica, sans-serif;
@@ -75,13 +83,20 @@ li {
 }
 .flexContainer {
     display: flex;
-    padding: 60px 30px;
-    flex-direction: row;
-}
-.flexContainer div {
-    width: 33%;
-    padding: 25px;
-}
+    justify-content: space-between;
+  }
+  
+  .skill {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: left;
+    margin: 0 10px;
+  }
+  
+  .skill img {
+    max-width: 100%;
+  }
 
 /* My Work Section Constructed Using CSS Grid*/
 .myWork {
@@ -117,6 +132,35 @@ button img {
     margin-right: 10px;
 }
 
+.to-top {
+    background: #078F7F;
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    color:#1f1f1f;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:3;
+}
+
+.to-top i {
+    color: #e5e3e3;
+}
+
 @media only screen and (max-width: 600px) {
     .workGrid {
         grid-template-columns: 1fr;
@@ -127,5 +171,22 @@ button img {
         grid-template-columns: 1fr;
 
     }
+    .skill {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+    
+      .skill h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
     ;
 }
+
+@media screen and (max-width: 903px) {
+    nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
